@@ -11,20 +11,22 @@
         "test": "jest --config jest.config.json --coverage",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "tslint -p tsconfig.json",
-        "build": "tsc -P tsconfig.json"
+        "build": "tsc -P tsconfig.json",
+        "codecov": "codecov"
     },
     "lint-staged": {
-      "**/*.js": [
-          "prettier --write"
-      ],
-      "*.ts?(x)": [
-          "prettier --write --parser=typescript",
-          "tslint"
-      ]
+        "**/*.js": [
+            "prettier --write"
+        ],
+        "*.ts?(x)": [
+            "prettier --write --parser=typescript",
+            "tslint"
+        ]
     },
     "devDependencies": {
         "@types/jest": "^26.0.14",
         "@types/node": "^14.11.2",
+        "codecov": "^3.7.2",
         "husky": "^4.3.0",
         "jest": "^26.4.2",
         "lint-staged": "^10.4.0",
